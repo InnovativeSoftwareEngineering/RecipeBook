@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="RecipeBook.RecipeBookPage" Title="Categories"
+		x:Name="RecipeBookPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     Spacing="15">
+            <ListView x:Name="CategoriesView" ItemTapped="Handle_ItemTapped" ItemSelected="Handle_ItemSelected">
+				<ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding .}" TextColor="Black" />
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<Button x:Name="AddButton" Text="Add Category" Clicked="Handle_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
